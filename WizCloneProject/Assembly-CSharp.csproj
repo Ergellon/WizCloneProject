@@ -131,6 +131,7 @@
     <Compile Include="Assets\PUN\Plugins\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Launcher.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerNameInput.cs" />
     <None Include="Assets\PUN\Photon Unity Networking\link.xml" />
     <None Include="Assets\PUN\Plugins\Photon3Unity3D.xml" />

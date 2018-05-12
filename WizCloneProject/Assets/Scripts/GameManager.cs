@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Photon.PunBehaviour
 {
+    public static GameManager gameManager;
 
     // Use this for initialization
     void Start()
     {
-
+        gameManager = this;
     }
 
     // Update is called once per frame
