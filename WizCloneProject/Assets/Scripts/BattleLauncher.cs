@@ -12,7 +12,7 @@ public class BattleLauncher : Photon.MonoBehaviour {
 
 	void Start () {
 
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
 	}
 	
 	void Update () {
@@ -20,14 +20,7 @@ public class BattleLauncher : Photon.MonoBehaviour {
 	}
 
     public void ChangePlayerName()
-    {
-        if (photonView.isMine == true)
-        {
-            playername = inputname.text;
-        }
-        else
-        {
-            enemyname = inputname.text;
-        }
+    {      
+            playername = inputname.text;       
     }
 }

@@ -130,7 +130,11 @@
     <Compile Include="Assets\PUN\PhotonChatApi\IChatClientListener.cs" />
     <Compile Include="Assets\PUN\Plugins\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\BattleLauncher.cs" />
+    <Compile Include="Assets\Scripts\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\BattleUIManager.cs" />
     <Compile Include="Assets\Scripts\ConnectionLauncher.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <None Include="Assets\PUN\Photon Unity Networking\link.xml" />
     <None Include="Assets\PUN\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\PUN\Plugins\release_history.txt" />

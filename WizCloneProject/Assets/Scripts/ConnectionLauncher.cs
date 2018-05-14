@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class ConnectionLauncher : Photon.PunBehaviour {
@@ -43,6 +44,13 @@ public class ConnectionLauncher : Photon.PunBehaviour {
     public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
     {
         PhotonNetwork.CreateRoom(null);
+    }
+    public override void OnJoinedRoom()
+    {
+       // if (PhotonNetwork.room.PlayerCount == 2)
+        //{
+            SceneManager.LoadScene("Battle");
+        //}
     }
 
 
