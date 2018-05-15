@@ -5,14 +5,20 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    public string name;
+    public string name = "default";
+    
+
 
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void SetName(string n)
+    {
+        name = n;
+    }
 }

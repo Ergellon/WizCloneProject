@@ -61,7 +61,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 114731368503243744}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -78,3 +78,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4597683b118c439deae7932ca3bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
