@@ -47,12 +47,19 @@ public class ConnectionLauncher : Photon.PunBehaviour {
     }
     public override void OnJoinedRoom()
     {
-       if (PhotonNetwork.room.PlayerCount == 2)
+       if (PhotonNetwork.room.PlayerCount == 2)   //number of players must be set in room properties, not here
+        {
+          SceneManager.LoadScene("Battle");
+        }
+    }
+    
+    public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
+    {
+        if (PhotonNetwork.room.PlayerCount == 2)
         {
             SceneManager.LoadScene("Battle");
         }
     }
-
 
 
 }

@@ -6,11 +6,29 @@ public class GameManager : MonoBehaviour {
 
     public Player playerone, playertwo;
 
+    public BattleManager battleManager;
+
+    private GameObject[] playerslist;
+
     void Awake()
     {
         PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
-    void Start () {
+    void Start ()
+    {
+        playerslist = GameObject.FindGameObjectsWithTag("Player");
+
+        playerone = playerslist[0].GetComponent<Player>();
+        playertwo = playerslist[1].GetComponent<Player>();
+
+        if (playerone.photonView.isMine)
+        {
+            battleManager.SetPlayers(playerone, playertwo);
+        }
+        else
+        {
+            battleManager.SetPlayers(playertwo, playerone);
+        }
 
     }
 	

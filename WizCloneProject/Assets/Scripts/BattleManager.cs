@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour {
 
+    public Player player, enemy;
 
 
 	void Start ()
@@ -14,4 +15,12 @@ public class BattleManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SetPlayers(Player protagonist, Player antagonist)
+    {
+        player = protagonist;
+        enemy = antagonist;
+    }
+
+
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleUIManager : MonoBehaviour {
 
+
+
 	void Start () {
 		
 	}
