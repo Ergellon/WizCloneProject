@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleLauncher : Photon.MonoBehaviour {
+public class BattleLauncher : MonoBehaviour
+{
 
     public string playername = "defaultplayer";
-    public string enemyname = "defaultenemy";
 
     public InputField inputname;
 

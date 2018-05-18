@@ -6,9 +6,13 @@ public class GameManager : MonoBehaviour {
 
     public Player playerone, playertwo;
 
-	void Start () {
-		
-	}
+    void Awake()
+    {
+        PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0);
+    }
+    void Start () {
+
+    }
 	
 	void Update () {
 		

@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    public string name = "default";
-    
-
+    public string playername = "defaultplayer";
 
 	void Start () {
 		
@@ -17,8 +15,4 @@ public class Player : MonoBehaviour {
 		
 	}
 
-    public void SetName(string n)
-    {
-        name = n;
-    }
 }

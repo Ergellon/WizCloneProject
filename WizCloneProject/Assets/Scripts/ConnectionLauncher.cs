@@ -47,10 +47,10 @@ public class ConnectionLauncher : Photon.PunBehaviour {
     }
     public override void OnJoinedRoom()
     {
-       // if (PhotonNetwork.room.PlayerCount == 2)
-        //{
+       if (PhotonNetwork.room.PlayerCount == 2)
+        {
             SceneManager.LoadScene("Battle");
-        //}
+        }
     }
 
 
