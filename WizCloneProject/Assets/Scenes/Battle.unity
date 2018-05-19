@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 390840692}
   m_Layer: 0
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerone: {fileID: 0}
   playertwo: {fileID: 0}
+  firstplayeradded: 0
   battleManager: {fileID: 1520456947}
+  playerslist: []
 --- !u!4 &390840691
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
     public Player playerone, playertwo;
 
+    public bool firstplayeradded = false;
+
     public BattleManager battleManager;
 
 
@@ -13,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-        playerslist.Add(PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0));
+        PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
     void Start ()
     {
@@ -27,5 +29,19 @@ public class GameManager : MonoBehaviour {
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
 
+    }
+
+    public void SetPlayer(Player p)
+    {
+
+        if (firstplayeradded == false)
+        {
+            firstplayeradded = true;
+            playerone = p;
+        }
+        else
+        {
+            playertwo = p;
+        }
     }
 }

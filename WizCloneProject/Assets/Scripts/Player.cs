@@ -7,7 +7,8 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     public string playername = "defaultplayer_nonameloaded";
 
-
+    public GameManager gamemanager;
+    public GameObject gamemanagerobject;
     void Start () {
 		
 	}
@@ -23,7 +24,10 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     void OnPhotonInstantiate (PhotonMessageInfo info)
     {
-
+        gamemanagerobject = GameObject.FindGameObjectWithTag("GameManager");
+        gamemanager = gamemanagerobject.GetComponent<GameManager>();
+        gamemanager.SetPlayer(this);
+        
     }
 
 
