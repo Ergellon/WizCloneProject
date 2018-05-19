@@ -206,7 +206,9 @@ MonoBehaviour:
   playerone: {fileID: 0}
   playertwo: {fileID: 0}
   firstplayeradded: 0
+  playersready: 0
   battleManager: {fileID: 1520456947}
+  battleuimanager: {fileID: 2016139430}
   playerslist: []
 --- !u!4 &390840691
 Transform:
@@ -525,8 +527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64ea9cb6ff6adf4886d7af9ceeeb06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemy: {fileID: 0}
+  playerone: {fileID: 0}
+  playertwo: {fileID: 0}
+  battleuimanager: {fileID: 2016139430}
 --- !u!4 &1520456948
 Transform:
   m_ObjectHideFlags: 0
@@ -667,6 +670,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfab5e232f16684b9c8d318b8ad237c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  playernamefield: {fileID: 910119139}
+  enemynamefield: {fileID: 1837621541}
 --- !u!4 &2016139431
 Transform:
   m_ObjectHideFlags: 0

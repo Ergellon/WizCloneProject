@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleLauncher : MonoBehaviour
 {
 
-    public string playername = "defaultplayer";
+    public string playername = "default";
 
     public InputField inputname;
 

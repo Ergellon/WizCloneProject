@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour {
 
-    public Player player, enemy;
+    public Player playerone, playertwo;
+
+    public BattleUIManager battleuimanager;
 
 
 	void Start ()
@@ -16,10 +18,10 @@ public class BattleManager : MonoBehaviour {
 		
 	}
 
-    public void SetPlayers(Player protagonist, Player antagonist)
+    public void SetPlayerToBattleManager(Player pone, Player ptwo)
     {
-        player = protagonist;
-        enemy = antagonist;
+        playerone = pone;
+        playertwo = ptwo;
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

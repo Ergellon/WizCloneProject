@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour {
     public Player playerone, playertwo;
 
     public bool firstplayeradded = false;
+    public bool playersready = false;
 
     public BattleManager battleManager;
+    public BattleUIManager battleuimanager;
 
 
     public List<GameObject> playerslist = new List<GameObject>();
@@ -23,8 +25,16 @@ public class GameManager : MonoBehaviour {
     }
 	
 	void Update () {
+        if (playersready == true)
+        {
+            Debug.Log("READY");
 
-	}
+            battleManager.SetPlayerToBattleManager(playerone, playertwo);
+            battleuimanager.SetPlayerToUIManager(playerone, playertwo);
+            battleuimanager.SetNames();
+            playersready = false;
+        }
+    }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -42,6 +52,7 @@ public class GameManager : MonoBehaviour {
         else
         {
             playertwo = p;
+            playersready = true;
         }
     }
 }

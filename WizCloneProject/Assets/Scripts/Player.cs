@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class Player : Photon.MonoBehaviour, IPunObservable {
 
-    public string playername = "defaultplayer_nonameloaded";
+    public string playername = "nonameloaded";
 
     public GameManager gamemanager;
     public GameObject gamemanagerobject;
-    void Start () {
-		
+
+    public BattleLauncher battlelauncher;
+
+    void Start ()
+    {
+        battlelauncher = GameObject.FindGameObjectWithTag("BattleLauncher").GetComponent<BattleLauncher>();
+        playername = battlelauncher.playername;
 	}
 	
 	void Update () {
