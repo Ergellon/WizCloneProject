@@ -18,10 +18,17 @@ public class GameManager : MonoBehaviour {
     {
         playerslist = GameObject.FindGameObjectsWithTag("Player");
 
-        playerone = playerslist[0].GetComponent<Player>();
-        playertwo = playerslist[1].GetComponent<Player>();
+        int i = 0;
+        foreach (GameObject p in playerslist)
+        {
+            i++;
+            Debug.Log(i);
+        }
 
-        if (playerone.photonView.isMine)
+        //playerone = playerslist[0].GetComponent<Player>();
+        //playertwo = playerslist[1].GetComponent<Player>();
+
+       /* if (playerone.photonView.isMine)
         {
             battleManager.SetPlayers(playerone, playertwo);
         }
@@ -29,6 +36,9 @@ public class GameManager : MonoBehaviour {
         {
             battleManager.SetPlayers(playertwo, playerone);
         }
+        */
+
+
 
     }
 	
