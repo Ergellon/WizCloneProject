@@ -21,4 +21,10 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
         
     }
 
+    void OnPhotonInstantiate (PhotonMessageInfo info)
+    {
+
+    }
+
+
 }

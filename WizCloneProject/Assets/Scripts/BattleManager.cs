@@ -22,5 +22,8 @@ public class BattleManager : MonoBehaviour {
         enemy = antagonist;
     }
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
 
+    }
 }
