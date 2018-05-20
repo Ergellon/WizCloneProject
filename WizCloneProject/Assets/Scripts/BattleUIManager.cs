@@ -15,6 +15,8 @@ public class BattleUIManager : MonoBehaviour {
 	
 	void Update ()
     {
+        playernamefield.text = player.playername;
+        enemynamefield.text = enemy.playername;
     }
 
     public void SetPlayerToUIManager (Player pone, Player ptwo)

@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour {
             //battleManager.SetPlayerToBattleManager(playerone, playertwo);
             battleuimanager.SetPlayerToUIManager(playerone, playertwo);
             battleuimanager.SetNames();
-            Debug.Log(playerone.playername);
-            Debug.Log(playertwo.playername);
+            //Debug.Log(playerone.playername);
+            //Debug.Log(playertwo.playername);
             playersready = false;
         }                      
     }
