@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     public BattleUIManager battleuimanager;
 
 
-    public List<GameObject> playerslist = new List<GameObject>();
+    //public List<GameObject> playerslist = new List<GameObject>();
 
     void Awake()
     {
@@ -29,11 +29,13 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("READY");
 
-            battleManager.SetPlayerToBattleManager(playerone, playertwo);
+            //battleManager.SetPlayerToBattleManager(playerone, playertwo);
             battleuimanager.SetPlayerToUIManager(playerone, playertwo);
             battleuimanager.SetNames();
+            Debug.Log(playerone.playername);
+            Debug.Log(playertwo.playername);
             playersready = false;
-        }
+        }                      
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
