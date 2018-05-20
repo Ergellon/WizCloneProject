@@ -13,9 +13,9 @@ public class BattleUIManager : MonoBehaviour {
 		
 	}
 	
-	void Update () {
-		
-	}
+	void Update ()
+    {
+    }
 
     public void SetPlayerToUIManager (Player pone, Player ptwo)
     {

@@ -14,8 +14,7 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     void Start ()
     {
-        battlelauncher = GameObject.FindGameObjectWithTag("BattleLauncher").GetComponent<BattleLauncher>();
-        playername = battlelauncher.playername;
+
 	}
 	
 	void Update () {
@@ -24,15 +23,25 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        
+        /*if (stream.isWriting)
+        {
+            stream.SendNext(playername);
+        }
+        else
+        {
+            this.playername =(string) stream.ReceiveNext();
+        }
+        */
     }
 
     void OnPhotonInstantiate (PhotonMessageInfo info)
     {
+        battlelauncher = GameObject.FindGameObjectWithTag("BattleLauncher").GetComponent<BattleLauncher>();
+        playername = battlelauncher.playername;
+        Debug.Log(playername);
         gamemanagerobject = GameObject.FindGameObjectWithTag("GameManager");
         gamemanager = gamemanagerobject.GetComponent<GameManager>();
         gamemanager.SetPlayer(this);
-        
     }
 
 

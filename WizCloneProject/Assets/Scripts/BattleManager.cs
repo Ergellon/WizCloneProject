@@ -24,8 +24,4 @@ public class BattleManager : MonoBehaviour {
         playertwo = ptwo;
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-
-    }
 }
