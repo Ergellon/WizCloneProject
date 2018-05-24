@@ -29,11 +29,15 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("READY");
 
-            //battleManager.SetPlayerToBattleManager(playerone, playertwo);
+            battleManager.SetPlayerToBattleManager(playerone, playertwo);
             battleuimanager.SetPlayerToUIManager(playerone, playertwo);
             battleuimanager.SetNames();
+            battleuimanager.SetSpellbook();
             //Debug.Log(playerone.playername);
             //Debug.Log(playertwo.playername);
+
+            playerone.hasTurn = true;
+
             playersready = false;
         }                      
     }
@@ -56,5 +60,23 @@ public class GameManager : MonoBehaviour {
             playertwo = p;
             playersready = true;
         }
+    }
+
+    public void ChangeTurn()
+    {
+        if (playerone.hasTurn)
+        {
+            playerone.hasTurn = false;
+            playertwo.hasTurn = true;
+            Debug.Log("Player 2 turn");
+            
+        }
+        else
+        {
+            playertwo.hasTurn = false;
+            playerone.hasTurn = true;
+            Debug.Log("Player 1 turn");
+        }
+        
     }
 }

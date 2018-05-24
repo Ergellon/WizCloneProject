@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/BattleLauncher.unity
-    guid: 9e74bcba6ebfce64395998e75ca8ed11
+    path: Assets/Scenes/Launcher.unity
+    guid: 44e23e51a711c154485f9c0fd51416f5
   - enabled: 1
     path: Assets/Scenes/Battle.unity
-    guid: 2347a0482f3c5e548a2d272cdd834f5a
+    guid: f7c689cc2a74d574d9ae48a9f287d4be
   m_configObjects: {}
