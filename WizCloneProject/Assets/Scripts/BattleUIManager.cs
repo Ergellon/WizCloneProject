@@ -12,12 +12,14 @@ public class BattleUIManager : MonoBehaviour {
     public Text playerhealth, enemyhealth;
     public Text playerfire, enemyfire, playerwater, enemywater, playerearth, enemyearth, playerair, enemyair;
 
+    public Text cardinfo;
+
     public List<Button> spellbook = new List<Button>();
     public List<Button> playercreatures = new List<Button>();
     public List<Button> enemycreatures = new List<Button>();
 
-
     public bool namesset = false;
+
 
 	void Start () {
 		
@@ -25,10 +27,12 @@ public class BattleUIManager : MonoBehaviour {
 	
 	void Update ()
     {
-            SetNames();
-            namesset = true;
+        SetNames(); // must be fixed later
+
         playerhealth.text = player.health.ToString();
         enemyhealth.text = enemy.health.ToString();
+
+        
 
     }
 
@@ -72,32 +76,84 @@ public class BattleUIManager : MonoBehaviour {
     }
     public void SetSpellbook()
     {
-        for (int i = 0; i<25; i++) // there are 24 cards in game, magic number
+        for (int i = 0; i<24; i++) // there are 24 cards in game, magic number
         {
             
             SetCard(spellbook[i], player.spellbook[i]);
         }
     }
     public void SetCard(Button b, Creature c)
-    {
-        Text[] t = new Text[3];
+    {       
+         Text[] t = new Text[3];
         t = b.GetComponentsInChildren<Text>();
         for (int i = 0; i<3; i++)
         {
             if(t[i].name == "Health")
             {
                 t[i].text =  c.health.ToString();
+                Debug.Log("Settinginfo");
+
             }
             if (t[i].name == "Attack")
             {
                 t[i].text = c.attack.ToString();
+                Debug.Log("Settinginfo");
+
             }
             if (t[i].name == "Manacost")
             {
                 t[i].text = c.cost.ToString();
+                Debug.Log("Settinginfo");
+
             }
         }
+
+        Image[] images = new Image[4];
+        images = b.GetComponentsInChildren<Image>();
+        for(int i = 0; i<3;i++)
+        {
+            if(images[i].name == "Creature Image")
+            {
+                images[i].sprite = c.image;
+            }
+        }
+
         
     }
 
+    public void ShowDescription (Button b)
+    {
+        for (int i = 0; i<24;i++)
+        {
+            if(b == spellbook[i])
+            {
+                cardinfo.text = player.spellbook[i].description;
+            }
+        }
+    }
+
+    public void PlaceCreature(int number, Creature c)
+    {
+        playercreatures[number].image.sprite = c.image;
+
+        Text[] t = new Text[3];
+        t = playercreatures[number].GetComponentsInChildren<Text>();
+        for (int i = 0; i < 3; i++)
+        {
+            if (t[i].name == "Health")
+            {
+                t[i].text = c.health.ToString();
+            }
+            if (t[i].name == "Attack")
+            {
+                t[i].text = c.attack.ToString();
+                
+            }
+
+        }
+    }
+    public void UpdateField()
+    {
+
+    }
 }

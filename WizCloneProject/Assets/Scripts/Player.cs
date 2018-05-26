@@ -23,7 +23,7 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     void Start ()
     {
-
+        
     }
 
     void Update () {
@@ -38,6 +38,7 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
             stream.SendNext(health);
             stream.SendNext(fire); stream.SendNext(water);
             stream.SendNext(earth); stream.SendNext(air);
+            stream.SendNext(hasTurn);
         }
         else
         {
@@ -47,6 +48,7 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
             this.water = (int)stream.ReceiveNext();
             this.air = (int)stream.ReceiveNext();
             this.earth = (int)stream.ReceiveNext();
+            hasTurn = (bool)stream.ReceiveNext();
         }
         
     }
@@ -64,6 +66,8 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
             playername = battlelauncher.playername;
 
             FillSpellbook();
+            FillCreatures();
+            Debug.Log("Instantiated");
 
         }
         gamemanager.SetPlayer(this);
@@ -72,9 +76,42 @@ public class Player : Photon.MonoBehaviour, IPunObservable {
 
     void FillSpellbook()
     {
+ 
         spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow()); 
+
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+
+        spellbook.Add(new Cow());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Cow());
         spellbook.Add(new Cow());
 
     }
 
+    void FillCreatures()
+    {
+        for (int i = 0;i<7;i++)
+        {
+            creatures.Add(new NoCreature());
+        }
+    }
 }

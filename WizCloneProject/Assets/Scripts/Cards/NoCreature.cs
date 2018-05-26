@@ -5,10 +5,13 @@ using UnityEngine;
 public class NoCreature : Creature {
 
 	void Start () {
-        isempty = true;
 	}
 	
 	void Update () {
 		
 	}
+    public NoCreature()
+    {
+        isempty = true;
+    }
 }

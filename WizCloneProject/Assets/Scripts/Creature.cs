@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Creature : Card {
 
-    public int health = 1;
+    public int health = 0;
     public int attack = 0;
     public bool isempty = false;
     
