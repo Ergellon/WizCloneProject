@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour {
 
-    public Player playerone, playertwo;
+    public BattleUIManager battleUIManager;
 
-    public BattleUIManager battleuimanager;
-
+    Player playerone, playertwo;
 
 	void Start ()
     {
 
 	}
 	
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
-    public void SetPlayerToBattleManager(Player pone, Player ptwo)
+    public void SetPlayer ()
     {
-        playerone = pone;
-        playertwo = ptwo;
+        
     }
-
 }

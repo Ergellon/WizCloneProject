@@ -132,17 +132,9 @@
     <Compile Include="Assets\Scripts\BattleLauncher.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\BattleUIManager.cs" />
-    <Compile Include="Assets\Scripts\Card.cs" />
-    <Compile Include="Assets\Scripts\Cards\Chicken.cs" />
-    <Compile Include="Assets\Scripts\Cards\Chickenspell.cs" />
-    <Compile Include="Assets\Scripts\Cards\Cow.cs" />
-    <Compile Include="Assets\Scripts\Cards\NoCreature.cs" />
     <Compile Include="Assets\Scripts\ConnectionLauncher.cs" />
-    <Compile Include="Assets\Scripts\Creature.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\ManaButton.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Spell.cs" />
     <None Include="Assets\PUN\Photon Unity Networking\link.xml" />
     <None Include="Assets\PUN\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\PUN\Plugins\release_history.txt" />

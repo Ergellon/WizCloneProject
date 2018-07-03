@@ -9,7 +9,7 @@ public class ConnectionLauncher : Photon.PunBehaviour {
 
     string gameversion = "0.01";
 
-    public GameObject connecting;
+    public Text connecting;
 
     void Awake()
     {
@@ -26,8 +26,7 @@ public class ConnectionLauncher : Photon.PunBehaviour {
 
     public void Connect ()
     {
-        connecting.SetActive(true);
-        
+        connecting.text = "Connecting...";      
         if (PhotonNetwork.connectedAndReady)
         {
             PhotonNetwork.JoinRandomRoom(); //maybe try JoinOrCreate later
@@ -44,6 +43,7 @@ public class ConnectionLauncher : Photon.PunBehaviour {
     public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
     {
         PhotonNetwork.CreateRoom(null);
+        connecting.text = "Waiting for another player...";
     }
     public override void OnJoinedRoom()
     {
