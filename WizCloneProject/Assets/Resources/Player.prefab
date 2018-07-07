@@ -78,4 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3dfa9891d95ad42a4b469c3b5c10e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playername: 
+  playername: defaultname
+  health: 0
+  fire: 0
+  water: 0
+  earth: 0
+  air: 0

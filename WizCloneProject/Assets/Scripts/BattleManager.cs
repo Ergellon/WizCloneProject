@@ -8,6 +8,8 @@ public class BattleManager : MonoBehaviour {
 
     Player playerone, playertwo;
 
+    Player attacker, defender;
+
 	void Start ()
     {
 
@@ -18,8 +20,9 @@ public class BattleManager : MonoBehaviour {
 		
 	}
 
-    public void SetPlayer ()
+    public void SetPlayer (Player pone, Player ptwo)
     {
-        
+        playerone = pone;
+        playertwo = ptwo;
     }
 }

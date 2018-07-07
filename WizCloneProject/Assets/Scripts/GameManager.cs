@@ -8,21 +8,69 @@ public class GameManager : MonoBehaviour {
     public BattleUIManager battleUIManager;
     public Player playerone, playertwo;
 
-    public int init = 0;
+
+    public int activeplayernumber;
 
     GameObject[] playerobjects = new GameObject[2];
-    
+    Player[] players = new Player[2];
+
+
+    PhotonView photonView;
     void Start ()
     {
-        PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity, 0);
-        while (init < 2);
+
+        photonView = PhotonView.Get(this);
         playerobjects = GameObject.FindGameObjectsWithTag("Player");
-        playerone = playerobjects[0].GetComponent<Player>();
-        playertwo = playerobjects[1].GetComponent<Player>();
+        if (playerobjects[0].GetComponent<Player>().photonView.viewID< playerobjects[1].GetComponent<Player>().photonView.viewID)
+        {
+            playerone = playerobjects[0].GetComponent<Player>();
+            playertwo = playerobjects[1].GetComponent<Player>();
+        }
+        else
+        {
+            playerone = playerobjects[1].GetComponent<Player>();
+            playertwo = playerobjects[0].GetComponent<Player>();
+        }
+        
+        players[0] = playerone; players[1] = playertwo;
+
+        battleManager.SetPlayer(playerone, playertwo);
+        battleUIManager.SetPlayer(playerone, playertwo);
+        battleUIManager.SetNames();
+
+        activeplayernumber = 0;
+
+        battleUIManager.UpdateStats();
     }
+
 	
 	void Update ()
     {
-		
-	}
+        battleUIManager.UpdateStats();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(activeplayernumber);
+        }
+        else
+        {
+            activeplayernumber = (int)stream.ReceiveNext();
+        }
+    }
+
+    public void ChangeTurn()
+    {
+        activeplayernumber++;
+        activeplayernumber %= 2;
+        players[activeplayernumber].IncreaseMana();
+        battleUIManager.UpdateStats();
+    }
+
+    public void SkipTurn()
+    {
+            ChangeTurn();
+    }
 }

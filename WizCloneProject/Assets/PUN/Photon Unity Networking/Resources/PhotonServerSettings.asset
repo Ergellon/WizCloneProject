@@ -43,4 +43,5 @@ MonoBehaviour:
   - RequestForPickupTimes
   - TaggedPlayer
   - AddPlayers
+  - UpdateStats
   DisableAutoOpenWizard: 1
