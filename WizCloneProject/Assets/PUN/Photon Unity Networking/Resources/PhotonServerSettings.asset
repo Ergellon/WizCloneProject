@@ -44,4 +44,5 @@ MonoBehaviour:
   - TaggedPlayer
   - AddPlayers
   - UpdateStats
+  - ChangeTurn
   DisableAutoOpenWizard: 1

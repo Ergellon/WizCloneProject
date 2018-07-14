@@ -12,6 +12,11 @@ public class BattleUIManager : MonoBehaviour {
     public Text playerhealth, enemyhealth;
     public Text playerfire, playerwater, playerearth, playerair;
     public Text enemyfire, enemywater, enemyearth, enemyair;
+    public Text cardname, carddesciption;
+
+    public List<Button> spellbookbuttons = new List<Button>();
+    public List<Button> battlefieldplayerbuttons = new List<Button>();
+    public List<Button> battlefieldenemybuttons = new List<Button>();
 
 	void Start ()
     {
@@ -47,9 +52,16 @@ public class BattleUIManager : MonoBehaviour {
 
     public void SetNames()
     {
-        Debug.Log(enemy.playername);
-        Debug.Log(player.playername);
         playername.text = player.playername;
         enemyname.text = enemy.playername;
+    }
+
+    public void SetSpellbookUI()
+    {
+      for (int i = 0; i<player.spellbook.Count;i++)
+        {
+            spellbookbuttons[i].image.sprite = player.spellbook[i].icon;
+
+        }
     }
 }

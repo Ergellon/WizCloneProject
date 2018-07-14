@@ -137,10 +137,10 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 4ce2b1853c9a392b036a6a654be90ccb Assembly-CSharp.dll:.OnClickInstantiate
 090584907af2e462994cc893ced507b3 Assembly-CSharp.dll:.PhotonRigidbodyView
-1dff2c1bc8a07b4c47a34892bbc8a237 Assembly-CSharp.dll:.GameManager
+40df94e08fe9e7dfc5d8dca10fff18ec Assembly-CSharp.dll:.GameManager
 49bc66d54afe3d873c5e04e0dc2980ab Assembly-CSharp.dll:.PhotonTransformView
 c0ad1fb5d400aa83cb257e5f6c3714cf Assembly-CSharp.dll:.OnClickDestroy
-2dd946e95790bf2106f0e2694e1e2392 Assembly-CSharp.dll:.Player
+ef1b87987ac321e16371d776df832a04 Assembly-CSharp.dll:.Player
 30c6237931168f8b4c2f10a656a47aa8 Assembly-CSharp.dll:.PickupItem
 b9efe2a0d1c9ba7bc46e66a07a897115 Assembly-CSharp.dll:.ServerSettings
 e3db0de06ede87e84b88d4a2079f2b57 Assembly-CSharp.dll:ExitGames.UtilityScripts.TextButtonTransition

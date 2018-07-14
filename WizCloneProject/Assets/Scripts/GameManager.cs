@@ -7,9 +7,7 @@ public class GameManager : MonoBehaviour {
     public BattleManager battleManager;
     public BattleUIManager battleUIManager;
     public Player playerone, playertwo;
-
-
-    public int activeplayernumber;
+    public Player localplayer;
 
     GameObject[] playerobjects = new GameObject[2];
     Player[] players = new Player[2];
@@ -31,6 +29,17 @@ public class GameManager : MonoBehaviour {
             playerone = playerobjects[1].GetComponent<Player>();
             playertwo = playerobjects[0].GetComponent<Player>();
         }
+
+        if (playerone.photonView.isMine)
+        {
+            localplayer = playerone;
+            Debug.Log("local player one");
+        }
+        else if (playertwo.photonView.isMine)
+        {
+            localplayer = playertwo;
+            Debug.Log("local player two");
+        }
         
         players[0] = playerone; players[1] = playertwo;
 
@@ -38,39 +47,48 @@ public class GameManager : MonoBehaviour {
         battleUIManager.SetPlayer(playerone, playertwo);
         battleUIManager.SetNames();
 
-        activeplayernumber = 0;
-
         battleUIManager.UpdateStats();
+        battleUIManager.SetSpellbookUI();
+
+        playerone.hasturn = true;
     }
 
-	
-	void Update ()
-    {
-        battleUIManager.UpdateStats();
-    }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.isWriting)
-        {
-            stream.SendNext(activeplayernumber);
-        }
-        else
-        {
-            activeplayernumber = (int)stream.ReceiveNext();
-        }
-    }
 
-    public void ChangeTurn()
-    {
-        activeplayernumber++;
-        activeplayernumber %= 2;
-        players[activeplayernumber].IncreaseMana();
-        battleUIManager.UpdateStats();
     }
 
     public void SkipTurn()
     {
-            ChangeTurn();
+        Debug.Log("button pressed");
+        if (localplayer.hasturn == true)
+        {
+            Debug.Log("button active");
+            photonView.RPC("ChangeTurn", PhotonTargets.All);
+            battleUIManager.UpdateStats();
+        }
     }
+
+
+    [PunRPC]
+    public void ChangeTurn()
+    {
+        Debug.Log("Turn function started");
+        for (int i = 0; i < 2; i++)
+        {
+            if (players[i].hasturn == true)
+            {
+                players[i].hasturn = false;
+            }
+            else
+            {
+                players[i].IncreaseMana();
+                players[i].hasturn = true;
+            }
+        }
+        battleUIManager.UpdateStats();
+    }
+
+
 }

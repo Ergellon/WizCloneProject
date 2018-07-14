@@ -10,12 +10,27 @@ public class Player : Photon.MonoBehaviour{
 
     public int health;
     public int fire, water, earth, air;
+    public bool hasturn;
 
+    //Card[] spellbook = new Card[24];
+
+    public Creature[] battleline = new Creature[7];
+    public bool[] battlelinefilling = new bool[7];
+
+    public List<Card> spellbook = new List<Card>();
+    //List<Creature> battleline = new List<Creature>();
+    //List<bool> battlelinefilling = new List<bool>();
 
 	void Start ()
     {
         health = 30;
         fire = water = earth = air = 1;
+        hasturn = false;
+        for (int i = 0; i<7; i++)
+        {
+            battlelinefilling[i] = false;
+        }
+        FillSpellbook();
     }
 	
 	void Update ()
@@ -33,6 +48,7 @@ public class Player : Photon.MonoBehaviour{
             stream.SendNext(water);
             stream.SendNext(earth);
             stream.SendNext(air);
+            stream.SendNext(hasturn);
         }
         else
         {
@@ -42,6 +58,7 @@ public class Player : Photon.MonoBehaviour{
             this.water = (int)stream.ReceiveNext();
             this.earth = (int)stream.ReceiveNext();
             this.air = (int)stream.ReceiveNext();
+            this.hasturn = (bool)stream.ReceiveNext();
         }
     }
     
@@ -64,4 +81,53 @@ public class Player : Photon.MonoBehaviour{
     {
         fire++;water++;earth++;air++;
     }
+    public void FillSpellbook()
+    {
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Sparks());
+
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Chicken());
+        spellbook.Add(new Cow());
+        spellbook.Add(new Cow());
+
+    }
+
+   /* [PunRPC]
+    public void ChangeTurn()
+    {
+        Debug.Log("Turn function started");
+        if (hasturn == true) 
+        {
+            hasturn = false;
+        }
+        else
+        {
+            IncreaseMana();
+            hasturn = true;
+        }
+    }
+    */
 }
+
+

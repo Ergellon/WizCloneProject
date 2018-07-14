@@ -56,7 +56,7 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 1
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
@@ -84,3 +84,4 @@ MonoBehaviour:
   water: 0
   earth: 0
   air: 0
+  hasturn: 0
