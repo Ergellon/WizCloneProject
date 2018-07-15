@@ -31,6 +31,7 @@ public class Player : Photon.MonoBehaviour{
             battlelinefilling[i] = false;
         }
         FillSpellbook();
+        Debug.Log("Spellbook filled");
     }
 	
 	void Update ()

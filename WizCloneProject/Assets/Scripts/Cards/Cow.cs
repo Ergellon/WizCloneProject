@@ -9,9 +9,9 @@ public class Cow : Creature {
     {
         manacost = 1;
         attack = 1;
-        health = 3;
+        health = 5;
         element = "earth";
-        icon  = Resources.Load<Sprite>("CardIcons/cow.png");
+        icon  = Resources.Load<Sprite>("CardIcons/cow");
 
         cardname = "cow";
         description = "cow cow cow";

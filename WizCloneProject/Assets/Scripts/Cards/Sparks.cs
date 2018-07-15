@@ -11,7 +11,7 @@ public class Sparks : Spell {
         power = 1;
 
         element = "air";
-        icon = Resources.Load<Sprite>("CardIcons/magic-palm.png");
+        icon = Resources.Load<Sprite>("CardIcons/magic-palm");
 
         cardname = "Sparks";
         description = "sparks sparks sparks";

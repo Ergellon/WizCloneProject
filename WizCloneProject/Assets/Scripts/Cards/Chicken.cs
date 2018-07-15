@@ -10,7 +10,7 @@ public class Chicken : Creature {
         attack = 1;
         health = 3;
         element = "water";
-        icon = Resources.Load<Sprite>("CardIcons/chicken.png");
+        icon = Resources.Load<Sprite>("CardIcons/chicken");
 
         cardname = "Chicken";
          description = "Chicken chicken chicken";

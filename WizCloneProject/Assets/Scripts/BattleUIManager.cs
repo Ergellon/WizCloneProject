@@ -58,10 +58,51 @@ public class BattleUIManager : MonoBehaviour {
 
     public void SetSpellbookUI()
     {
-      for (int i = 0; i<player.spellbook.Count;i++)
+        Debug.Log("SpellbookUI started");
+        for (int i = 0; i < player.spellbook.Count; i++)
         {
-            spellbookbuttons[i].image.sprite = player.spellbook[i].icon;
+
+            Image[] images = new Image[6];
+            images = spellbookbuttons[i].GetComponentsInChildren<Image>();
+            for (int j = 0;j<6;j++)
+            {
+                if (images[j].name == "Icon")
+                {
+                    images[j].sprite = player.spellbook[i].icon;
+                }
+            }
+            //spellbookbuttons[i].GetComponentInChildren<Image>().sprite = player.spellbook[i].icon;
+            Button[] stats = new Button[4];
+            stats = spellbookbuttons[i].GetComponentsInChildren<Button>();
+            for (int j = 0; j<4;j++)
+            {
+                if (stats[j].name == "Sword")
+                {
+                    stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].attack.ToString();
+                    Debug.Log("sword");
+                }
+                else if (stats[j].name == "Drop")
+                {
+                    stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].health.ToString();
+                    Debug.Log("drop");
+                }
+                else if (stats[j].name == "Swirl")
+                {
+                    stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].manacost.ToString();
+                    Debug.Log("swirl");
+                }
+                else
+                {
+                    Debug.Log("error");
+                }
+            }
 
         }
+    }
+
+    public void CardSelectedUI(int n)
+    {
+        cardname.text = player.spellbook[n].cardname;
+        carddesciption.text = player.spellbook[n].description;
     }
 }
