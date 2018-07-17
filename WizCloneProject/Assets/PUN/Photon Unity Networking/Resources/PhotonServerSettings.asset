@@ -45,4 +45,7 @@ MonoBehaviour:
   - AddPlayers
   - UpdateStats
   - ChangeTurn
+  - CardPlaced
+  - PlaceCard
+  - UseSpell
   DisableAutoOpenWizard: 1

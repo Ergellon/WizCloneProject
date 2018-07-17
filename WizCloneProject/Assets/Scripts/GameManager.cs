@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public BattleManager battleManager;
     public BattleUIManager battleUIManager;
@@ -12,14 +13,16 @@ public class GameManager : MonoBehaviour {
     GameObject[] playerobjects = new GameObject[2];
     Player[] players = new Player[2];
 
+    public Card selectedcard;
+
 
     PhotonView photonView;
-    void Start ()
+    void Start()
     {
 
         photonView = PhotonView.Get(this);
         playerobjects = GameObject.FindGameObjectsWithTag("Player");
-        if (playerobjects[0].GetComponent<Player>().photonView.viewID< playerobjects[1].GetComponent<Player>().photonView.viewID)
+        if (playerobjects[0].GetComponent<Player>().photonView.viewID < playerobjects[1].GetComponent<Player>().photonView.viewID)
         {
             playerone = playerobjects[0].GetComponent<Player>();
             playertwo = playerobjects[1].GetComponent<Player>();
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour {
             localplayer = playertwo;
             Debug.Log("local player two");
         }
-        
+
         players[0] = playerone; players[1] = playertwo;
 
         battleManager.SetPlayer(playerone, playertwo);
@@ -50,7 +53,9 @@ public class GameManager : MonoBehaviour {
         battleUIManager.UpdateStats();
         battleUIManager.SetSpellbookUI();
 
+
         playerone.hasturn = true;
+        battleManager.attacker = playerone;
     }
 
 
@@ -87,8 +92,36 @@ public class GameManager : MonoBehaviour {
                 players[i].hasturn = true;
             }
         }
+        battleManager.SwitchAttacker();
         battleUIManager.UpdateStats();
     }
 
-
+    public void CardSelected(int n)
+    {
+        selectedcard = localplayer.spellbook[n];
+    }
+    public void CardPlaced(int slot)
+    {
+        if (localplayer.hasturn == true && selectedcard.iscreature == true)
+        {
+            photonView.RPC("PlaceCard", PhotonTargets.All, slot);
+        }
+    }
+    [PunRPC]
+    public void PlaceCard(int slot)
+    {
+        battleManager.PlaceCard((Creature)selectedcard, slot);
+    }
+    public void SpellUsed(int slot)
+    {
+        if(localplayer.hasturn == true && selectedcard.iscreature == false)
+        {
+            photonView.RPC("UseSpell", PhotonTargets.All, slot);
+        }
+    }
+    [PunRPC]
+    public void UseSpell (int slot)
+    {
+        battleManager.UseSpell((Spell)selectedcard, slot);
+    }
 }

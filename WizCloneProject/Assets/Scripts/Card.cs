@@ -9,6 +9,7 @@ public class Card {
     public int health;
     public string element;
     public Sprite icon;
+    public bool iscreature;
 
     public string cardname;
     public string description;

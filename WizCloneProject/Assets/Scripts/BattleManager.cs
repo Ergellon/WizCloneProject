@@ -8,7 +8,7 @@ public class BattleManager : MonoBehaviour {
 
     Player playerone, playertwo;
 
-    Player attacker, defender;
+    public Player attacker, defender;
 
 	void Start ()
     {
@@ -25,4 +25,19 @@ public class BattleManager : MonoBehaviour {
         playerone = pone;
         playertwo = ptwo;
     }
+    public void SwitchAttacker()
+    {
+        Player p = attacker;
+        attacker = defender;
+        defender = p;
+    }
+    public void PlaceCard(Creature creature,int slot)
+    {
+        attacker.battleline[slot] = creature;
+    }
+    public void UseSpell (Spell spell, int slot)
+    {
+
+    }
+    
 }

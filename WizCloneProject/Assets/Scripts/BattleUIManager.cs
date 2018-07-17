@@ -36,6 +36,10 @@ public class BattleUIManager : MonoBehaviour {
         playerearth.text = player.earth.ToString(); enemyearth.text = enemy.earth.ToString();
         playerair.text = player.air.ToString(); enemyair.text = enemy.air.ToString();
     }
+    public void UpdateBattleline()
+    {
+
+    }
     public void SetPlayer(Player pone, Player ptwo)
     {
         if (pone.photonView.isMine)
