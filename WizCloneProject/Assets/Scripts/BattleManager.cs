@@ -30,10 +30,13 @@ public class BattleManager : MonoBehaviour {
         Player p = attacker;
         attacker = defender;
         defender = p;
+
     }
     public void PlaceCard(Creature creature,int slot)
     {
         attacker.battleline[slot] = creature;
+        attacker.battlelinefilling[slot] = true;
+        Debug.Log("CardPlace");
     }
     public void UseSpell (Spell spell, int slot)
     {

@@ -98,19 +98,29 @@ public class GameManager : MonoBehaviour
 
     public void CardSelected(int n)
     {
+        //selectedcard = localplayer.spellbook[n];
+        photonView.RPC("SelectCard", PhotonTargets.All, n);
+    }
+    [PunRPC]
+    public void SelectCard (int n)
+    {
         selectedcard = localplayer.spellbook[n];
     }
+
     public void CardPlaced(int slot)
     {
         if (localplayer.hasturn == true && selectedcard.iscreature == true)
         {
             photonView.RPC("PlaceCard", PhotonTargets.All, slot);
+            photonView.RPC("ChangeTurn", PhotonTargets.All);
         }
     }
+
     [PunRPC]
     public void PlaceCard(int slot)
     {
         battleManager.PlaceCard((Creature)selectedcard, slot);
+        battleUIManager.UpdateBattleline();
     }
     public void SpellUsed(int slot)
     {
@@ -123,5 +133,6 @@ public class GameManager : MonoBehaviour
     public void UseSpell (int slot)
     {
         battleManager.UseSpell((Spell)selectedcard, slot);
+        battleUIManager.UpdateBattleline();
     }
 }

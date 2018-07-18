@@ -19,6 +19,10 @@ public class BattleUIManager : MonoBehaviour {
     public List<Button> playerbattleline = new List<Button>();
     public List<Button> enemybattleline = new List<Button>();
 
+    public List<GameObject> playerbattlelinecards = new List<GameObject>();
+    public List<GameObject> enemybattlelinecards = new List<GameObject>();
+
+
     public Text[] playercreatureattack = new Text[7];
     public Text[] enemycreatureattack = new Text[7];
     public Text[] playercreaturehealth = new Text[7];
@@ -52,15 +56,40 @@ public class BattleUIManager : MonoBehaviour {
     {
         for (int i = 0; i < 7; i++)
         {
-            playercreatureattack[i].text = player.battleline[i].attack.ToString();
-            enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();
-            playercreaturehealth[i].text = player.battleline[i].health.ToString();
-            enemycreaturehealth[i].text = enemy.battleline[i].health.ToString();
-            playercreaturecost[i].text = player.battleline[i].manacost.ToString();
-            enemycreaturecost[i].text = enemy.battleline[i].manacost.ToString();
+            if (player.battlelinefilling[i] == true)
+            {
 
-            playercreatureicon[i].sprite = player.battleline[i].icon;
-            enemycreatureicon[i].sprite = player.battleline[i].icon;
+                Debug.Log(i);
+
+                Debug.Log("Playerbattlefilling");
+                playerbattlelinecards[i].SetActive(true);
+                
+                playercreatureattack[i].text = player.battleline[i].attack.ToString();
+                
+                playercreaturehealth[i].text = player.battleline[i].health.ToString();
+                
+                playercreaturecost[i].text = player.battleline[i].manacost.ToString();
+
+                playercreatureicon[i].sprite = player.battleline[i].icon;
+
+            }
+            if (enemy.battlelinefilling[i] == true)
+            {
+                Debug.Log(i);
+
+                Debug.Log("Enemybattlefilling");
+                enemybattlelinecards[i].SetActive(true);
+
+                enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();
+                
+                enemycreaturehealth[i].text = enemy.battleline[i].health.ToString();
+                
+                enemycreaturecost[i].text = enemy.battleline[i].manacost.ToString();
+        
+                enemycreatureicon[i].sprite = enemy.battleline[i].icon;
+
+            }
+            
         }
 
     }
@@ -107,21 +136,21 @@ public class BattleUIManager : MonoBehaviour {
                 if (stats[j].name == "Sword")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].attack.ToString();
-                    Debug.Log("sword");
+                    //Debug.Log("sword");
                 }
                 else if (stats[j].name == "Drop")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].health.ToString();
-                    Debug.Log("drop");
+                    //Debug.Log("drop");
                 }
                 else if (stats[j].name == "Swirl")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].manacost.ToString();
-                    Debug.Log("swirl");
+                    //Debug.Log("swirl");
                 }
                 else
                 {
-                    Debug.Log("error");
+                    //Debug.Log("error");
                 }
             }
 
@@ -132,5 +161,7 @@ public class BattleUIManager : MonoBehaviour {
     {
         cardname.text = player.spellbook[n].cardname;
         carddesciption.text = player.spellbook[n].description;
+       
+
     }
 }
