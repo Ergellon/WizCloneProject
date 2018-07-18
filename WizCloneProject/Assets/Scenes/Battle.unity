@@ -263,7 +263,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 80474482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 17
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 17
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &80474482
@@ -665,7 +687,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126190253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 21
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 21
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &126190253
@@ -851,7 +895,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 144028900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 23
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 23
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &144028900
@@ -1745,7 +1811,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 264331729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &264331729
@@ -2005,7 +2082,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 324783964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 22
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 22
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &324783964
@@ -2255,6 +2354,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 333110169}
+--- !u!114 &333110171 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 333110169}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &333110172 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 333110169}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &333110173 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 333110169}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &333110174 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 333110169}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &346393322
 Prefab:
   m_ObjectHideFlags: 0
@@ -2946,7 +3069,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 428967489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &428967489
@@ -3048,7 +3193,7 @@ MonoBehaviour:
   - {fileID: 126190252}
   - {fileID: 324783963}
   - {fileID: 144028899}
-  battlefieldplayerbuttons:
+  playerbattleline:
   - {fileID: 564179904}
   - {fileID: 2069714916}
   - {fileID: 515804478}
@@ -3056,7 +3201,7 @@ MonoBehaviour:
   - {fileID: 264331728}
   - {fileID: 1387285705}
   - {fileID: 1673645400}
-  battlefieldenemybuttons:
+  enemybattleline:
   - {fileID: 498772104}
   - {fileID: 1699553993}
   - {fileID: 493336512}
@@ -3064,6 +3209,70 @@ MonoBehaviour:
   - {fileID: 759415102}
   - {fileID: 564544275}
   - {fileID: 646303977}
+  playercreatureattack:
+  - {fileID: 664171159}
+  - {fileID: 774853162}
+  - {fileID: 1802263239}
+  - {fileID: 1250679600}
+  - {fileID: 1885289980}
+  - {fileID: 333110174}
+  - {fileID: 716271339}
+  enemycreatureattack:
+  - {fileID: 1312277690}
+  - {fileID: 1821182796}
+  - {fileID: 1279748601}
+  - {fileID: 2048884621}
+  - {fileID: 1846121022}
+  - {fileID: 979583279}
+  - {fileID: 860927949}
+  playercreaturehealth:
+  - {fileID: 664171158}
+  - {fileID: 774853161}
+  - {fileID: 1802263238}
+  - {fileID: 1250679599}
+  - {fileID: 1885289979}
+  - {fileID: 333110173}
+  - {fileID: 716271338}
+  enemycreaturehealth:
+  - {fileID: 1312277689}
+  - {fileID: 1821182795}
+  - {fileID: 1279748600}
+  - {fileID: 2048884620}
+  - {fileID: 1846121021}
+  - {fileID: 979583278}
+  - {fileID: 860927948}
+  playercreaturecost:
+  - {fileID: 664171157}
+  - {fileID: 774853160}
+  - {fileID: 1802263237}
+  - {fileID: 1250679598}
+  - {fileID: 1885289978}
+  - {fileID: 333110172}
+  - {fileID: 716271337}
+  enemycreaturecost:
+  - {fileID: 1312277688}
+  - {fileID: 1821182794}
+  - {fileID: 1279748599}
+  - {fileID: 2048884619}
+  - {fileID: 1846121020}
+  - {fileID: 979583277}
+  - {fileID: 860927947}
+  playercreatureicon:
+  - {fileID: 664171156}
+  - {fileID: 774853159}
+  - {fileID: 1802263236}
+  - {fileID: 1250679597}
+  - {fileID: 1885289977}
+  - {fileID: 333110171}
+  - {fileID: 716271336}
+  enemycreatureicon:
+  - {fileID: 1312277687}
+  - {fileID: 1821182793}
+  - {fileID: 1279748598}
+  - {fileID: 2048884618}
+  - {fileID: 1846121019}
+  - {fileID: 979583276}
+  - {fileID: 860927946}
 --- !u!4 &430483905
 Transform:
   m_ObjectHideFlags: 0
@@ -3153,7 +3362,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 439032128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &439032128
@@ -3697,7 +3928,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 481729215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &481729215
@@ -4138,7 +4391,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515804479}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &515804479
@@ -4250,7 +4514,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529948127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &529948127
@@ -4882,7 +5168,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 564179905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &564179905
@@ -5804,6 +6101,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 664171154}
+--- !u!114 &664171156 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 664171154}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &664171157 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 664171154}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &664171158 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 664171154}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &664171159 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 664171154}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &666553950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5880,7 +6201,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666553953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &666553953
@@ -6025,6 +6368,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 716271334}
+--- !u!114 &716271336 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 716271334}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &716271337 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 716271334}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &716271338 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 716271334}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &716271339 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 716271334}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &738886661
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +6990,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 774853157}
+--- !u!114 &774853159 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 774853157}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &774853160 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 774853157}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &774853161 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 774853157}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &774853162 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 774853157}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &806050275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6884,7 +7275,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 825387836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &825387836
@@ -7277,6 +7690,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 860927944}
+--- !u!114 &860927946 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 860927944}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &860927947 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 860927944}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &860927948 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 860927944}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &860927949 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 860927944}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &876889559
 GameObject:
   m_ObjectHideFlags: 0
@@ -7501,7 +7938,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932101965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &932101965
@@ -7687,7 +8146,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 976379211}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &976379211
@@ -7832,6 +8313,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 979583274}
+--- !u!114 &979583276 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 979583274}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &979583277 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 979583274}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &979583278 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 979583274}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &979583279 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 979583274}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &982613306
 GameObject:
   m_ObjectHideFlags: 0
@@ -8705,7 +9210,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078005352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1078005352
@@ -9324,7 +9851,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173361064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1173361064
@@ -9764,6 +10302,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1250679595}
+--- !u!114 &1250679597 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250679595}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1250679598 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250679595}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1250679599 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250679595}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1250679600 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1250679595}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1259911419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9840,7 +10402,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1259911422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1259911422
@@ -10133,6 +10717,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1279748596}
+--- !u!114 &1279748598 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1279748596}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1279748599 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1279748596}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1279748600 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1279748596}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1279748601 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1279748596}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1295817479
 GameObject:
   m_ObjectHideFlags: 0
@@ -10357,7 +10965,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1297597433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1297597433
@@ -10502,6 +11132,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1312277685}
+--- !u!114 &1312277687 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312277685}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1312277688 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312277685}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1312277689 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312277685}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1312277690 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312277685}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1319466115
 GameObject:
   m_ObjectHideFlags: 0
@@ -10652,7 +11306,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1334065933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1334065933
@@ -10764,7 +11440,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1351812006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1351812006
@@ -11129,7 +11827,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1387285706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1387285706
@@ -11533,7 +12242,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1485391083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1485391083
@@ -11824,7 +12555,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1495215559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 19
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 19
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1495215559
@@ -11936,7 +12689,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530922824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1530922824
@@ -12508,7 +13283,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1642682336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1642682336
@@ -12799,7 +13596,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1673645401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1673645401
@@ -13671,7 +14479,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801649093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1801649093
@@ -13816,6 +14646,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1802263234}
+--- !u!114 &1802263236 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802263234}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1802263237 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802263234}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1802263238 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802263234}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1802263239 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802263234}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1821182791
 Prefab:
   m_ObjectHideFlags: 0
@@ -13925,6 +14779,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1821182791}
+--- !u!114 &1821182793 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821182791}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1821182794 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821182791}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1821182795 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821182791}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1821182796 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821182791}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1821735742
 GameObject:
   m_ObjectHideFlags: 0
@@ -14409,6 +15287,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1846121017}
+--- !u!114 &1846121019 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846121017}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1846121020 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846121017}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1846121021 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846121017}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1846121022 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846121017}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1872751740
 GameObject:
   m_ObjectHideFlags: 0
@@ -14559,7 +15461,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1875977032}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1875977032
@@ -14704,6 +15628,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 1885289975}
+--- !u!114 &1885289977 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885289975}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1885289978 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885289975}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1885289979 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885289975}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1885289980 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1885289975}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1914987000
 GameObject:
   m_ObjectHideFlags: 0
@@ -14928,7 +15876,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1977617875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 18
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 430483904}
+        m_MethodName: CardSelectedUI
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 18
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1977617875
@@ -15363,6 +16333,30 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224055243608918130, guid: 9dc9ab4f4da458f4c9535dc79154002d,
     type: 2}
   m_PrefabInternal: {fileID: 2048884616}
+--- !u!114 &2048884618 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114556880237143182, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2048884616}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2048884619 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114858574223738394, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2048884616}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2048884620 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114581020501423964, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2048884616}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2048884621 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114974146892316730, guid: 9dc9ab4f4da458f4c9535dc79154002d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2048884616}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2065101080
 GameObject:
   m_ObjectHideFlags: 0
@@ -15578,7 +16572,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2069714917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381731089}
+        m_MethodName: CardPlaced
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2069714917
@@ -15642,6 +16647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleUIManager: {fileID: 430483904}
+  attacker: {fileID: 0}
+  defender: {fileID: 0}
 --- !u!4 &2080751607
 Transform:
   m_ObjectHideFlags: 0

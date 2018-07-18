@@ -15,10 +15,22 @@ public class BattleUIManager : MonoBehaviour {
     public Text cardname, carddesciption;
 
     public List<Button> spellbookbuttons = new List<Button>();
-    public List<Button> battlefieldplayerbuttons = new List<Button>();
-    public List<Button> battlefieldenemybuttons = new List<Button>();
 
-	void Start ()
+    public List<Button> playerbattleline = new List<Button>();
+    public List<Button> enemybattleline = new List<Button>();
+
+    public Text[] playercreatureattack = new Text[7];
+    public Text[] enemycreatureattack = new Text[7];
+    public Text[] playercreaturehealth = new Text[7];
+    public Text[] enemycreaturehealth = new Text[7];
+    public Text[] playercreaturecost = new Text[7];
+    public Text[] enemycreaturecost = new Text[7];
+
+    public Image[] playercreatureicon = new Image[7];
+    public Image[] enemycreatureicon = new Image[7];
+
+
+    void Start ()
     {
 		
 	}
@@ -38,6 +50,18 @@ public class BattleUIManager : MonoBehaviour {
     }
     public void UpdateBattleline()
     {
+        for (int i = 0; i < 7; i++)
+        {
+            playercreatureattack[i].text = player.battleline[i].attack.ToString();
+            enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();
+            playercreaturehealth[i].text = player.battleline[i].health.ToString();
+            enemycreaturehealth[i].text = enemy.battleline[i].health.ToString();
+            playercreaturecost[i].text = player.battleline[i].manacost.ToString();
+            enemycreaturecost[i].text = enemy.battleline[i].manacost.ToString();
+
+            playercreatureicon[i].sprite = player.battleline[i].icon;
+            enemycreatureicon[i].sprite = player.battleline[i].icon;
+        }
 
     }
     public void SetPlayer(Player pone, Player ptwo)
