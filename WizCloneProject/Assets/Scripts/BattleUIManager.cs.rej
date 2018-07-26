@@ -1,0 +1,35 @@
+diff a/WizCloneProject/Assets/Scripts/BattleUIManager.cs b/WizCloneProject/Assets/Scripts/BattleUIManager.cs	(rejected hunks)
+@@ -116,17 +116,33 @@
+                 if (stats[j].name == "Sword")
+                 {
+                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].attack.ToString();
++<<<<<<< HEAD
++=======
++                    //Debug.Log("sword");
++>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
+                 }
+                 else if (stats[j].name == "Drop")
+                 {
+                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].health.ToString();
++<<<<<<< HEAD
++=======
++                    //Debug.Log("drop");
++>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
+                 }
+                 else if (stats[j].name == "Swirl")
+                 {
+                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].manacost.ToString();
++<<<<<<< HEAD
+                 }
+                 else
+                 {
++=======
++                    //Debug.Log("swirl");
++                }
++                else
++                {
++                    //Debug.Log("error");
++>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
+                 }
+             }
+ 
