@@ -19,6 +19,10 @@ public class BattleUIManager : MonoBehaviour {
     public List<GameObject> playerbattleline = new List<GameObject>();
     public List<GameObject> enemybattleline = new List<GameObject>();
 
+    public List<GameObject> playerbattlelinecards = new List<GameObject>();
+    public List<GameObject> enemybattlelinecards = new List<GameObject>();
+
+
     public Text[] playercreatureattack = new Text[7];
     public Text[] enemycreatureattack = new Text[7];
     public Text[] playercreaturehealth = new Text[7];
@@ -52,6 +56,7 @@ public class BattleUIManager : MonoBehaviour {
     {
         for (int i = 0; i < 7; i++)
         {
+<<<<<<< HEAD
             if(player.battlelinefilling[i] == true)
             {
                 Debug.Log(i);
@@ -60,10 +65,29 @@ public class BattleUIManager : MonoBehaviour {
                 playercreaturehealth[i].text = player.battleline[i].health.ToString();
                 playercreaturecost[i].text = player.battleline[i].manacost.ToString();
                 playercreatureicon[i].sprite = player.battleline[i].icon;
+=======
+            if (player.battlelinefilling[i] == true)
+            {
+
+                Debug.Log(i);
+
+                Debug.Log("Playerbattlefilling");
+                playerbattlelinecards[i].SetActive(true);
+                
+                playercreatureattack[i].text = player.battleline[i].attack.ToString();
+                
+                playercreaturehealth[i].text = player.battleline[i].health.ToString();
+                
+                playercreaturecost[i].text = player.battleline[i].manacost.ToString();
+
+                playercreatureicon[i].sprite = player.battleline[i].icon;
+
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
             }
             if (enemy.battlelinefilling[i] == true)
             {
                 Debug.Log(i);
+<<<<<<< HEAD
                 enemybattleline[i].SetActive(true);
                 //enemycreatureattack[i].text = "kekekeke";
                 enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();
@@ -72,6 +96,22 @@ public class BattleUIManager : MonoBehaviour {
                 enemycreatureicon[i].sprite = enemy.battleline[i].icon;
             }
 
+=======
+
+                Debug.Log("Enemybattlefilling");
+                enemybattlelinecards[i].SetActive(true);
+
+                enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();
+                
+                enemycreaturehealth[i].text = enemy.battleline[i].health.ToString();
+                
+                enemycreaturecost[i].text = enemy.battleline[i].manacost.ToString();
+        
+                enemycreatureicon[i].sprite = enemy.battleline[i].icon;
+
+            }
+            
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
         }
 
     }
@@ -118,17 +158,33 @@ public class BattleUIManager : MonoBehaviour {
                 if (stats[j].name == "Sword")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].attack.ToString();
+<<<<<<< HEAD
+=======
+                    //Debug.Log("sword");
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
                 }
                 else if (stats[j].name == "Drop")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].health.ToString();
+<<<<<<< HEAD
+=======
+                    //Debug.Log("drop");
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
                 }
                 else if (stats[j].name == "Swirl")
                 {
                     stats[j].GetComponentInChildren<Text>().text = player.spellbook[i].manacost.ToString();
+<<<<<<< HEAD
                 }
                 else
                 {
+=======
+                    //Debug.Log("swirl");
+                }
+                else
+                {
+                    //Debug.Log("error");
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
                 }
             }
 
@@ -139,6 +195,8 @@ public class BattleUIManager : MonoBehaviour {
     {
         cardname.text = player.spellbook[n].cardname;
         carddesciption.text = player.spellbook[n].description;
+       
+
     }
     public void RemoveCreatureOnUI(Player p, int slot)
     {

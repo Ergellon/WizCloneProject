@@ -27,6 +27,7 @@ public class BattleManager : MonoBehaviour {
     }
     public void SwitchAttacker()
     {
+<<<<<<< HEAD
         if (playerone == attacker)
         {
             attacker = playertwo;
@@ -44,11 +45,19 @@ public class BattleManager : MonoBehaviour {
         //Player p = attacker;
        // attacker = defender;
         //defender = p;
+=======
+        Player p = attacker;
+        attacker = defender;
+        defender = p;
+
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
     }
     public void PlaceCard(Creature creature, int slot)
     {
         attacker.battlelinefilling[slot] = true;
         attacker.battleline[slot] = creature;
+        attacker.battlelinefilling[slot] = true;
+        Debug.Log("CardPlace");
     }
     public void UseSpell (int slot)
     {

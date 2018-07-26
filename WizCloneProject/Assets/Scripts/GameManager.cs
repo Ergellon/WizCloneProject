@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void CardSelected(int n)
     {
+<<<<<<< HEAD
         if (localplayer.hasturn == true)
         {
             photonView.RPC("SelectCard", PhotonTargets.All, n);
@@ -113,7 +114,17 @@ public class GameManager : MonoBehaviour
         {
             selectedcard = playertwo.spellbook[n];
         }
+=======
+        //selectedcard = localplayer.spellbook[n];
+        photonView.RPC("SelectCard", PhotonTargets.All, n);
     }
+    [PunRPC]
+    public void SelectCard (int n)
+    {
+        selectedcard = localplayer.spellbook[n];
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
+    }
+
     public void CardPlaced(int slot)
     {
 
@@ -121,11 +132,15 @@ public class GameManager : MonoBehaviour
             && localplayer.battlelinefilling[slot] == false)
         {
             photonView.RPC("PlaceCard", PhotonTargets.All, slot);
+<<<<<<< HEAD
             photonView.RPC("AttackSequence", PhotonTargets.All);
             AttackSequence();
+=======
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
             photonView.RPC("ChangeTurn", PhotonTargets.All);
         }
     }
+
     [PunRPC]
     public void PlaceCard(int slot)
     {
@@ -142,6 +157,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     public void UseSpell (int slot)
     {
+<<<<<<< HEAD
         battleManager.UseSpell(slot);
         battleUIManager.UpdateBattleline();
     }
@@ -149,5 +165,9 @@ public class GameManager : MonoBehaviour
     public void AttackSequence()
     {
         battleManager.AttackSequence(localplayer);
+=======
+        battleManager.UseSpell((Spell)selectedcard, slot);
+        battleUIManager.UpdateBattleline();
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
     }
 }

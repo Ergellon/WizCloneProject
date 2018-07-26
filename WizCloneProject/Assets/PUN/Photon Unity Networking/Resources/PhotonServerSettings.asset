@@ -49,5 +49,8 @@ MonoBehaviour:
   - PlaceCard
   - UseSpell
   - SelectCard
+<<<<<<< HEAD
   - AttackSequence
+=======
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
   DisableAutoOpenWizard: 1

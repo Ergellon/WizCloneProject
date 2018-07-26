@@ -119,7 +119,11 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+<<<<<<< HEAD
 41655ba5a1818cef2a595b7655a568af Assembly-CSharp.dll:.BattleUIManager
+=======
+b4a160f8a773e0854d8a650576884768 Assembly-CSharp.dll:.BattleUIManager
+>>>>>>> f847588708c498d5c7b8ba48db1e79df18186c2f
 7293089a75e5c16c58dc78fc926a31fd Assembly-CSharp.dll:.GameLoader
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 c2d15b04283157b00cbdbfaf16c18482 Assembly-CSharp.dll:.PickupItemSyncer
