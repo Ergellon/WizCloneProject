@@ -11,4 +11,8 @@ public class Spell : Card {
         attack = -1;
         health = -1;
     }
+    public virtual void OnCast(Player attacker, Player defender, int slot)
+    {
+
+    }
 }

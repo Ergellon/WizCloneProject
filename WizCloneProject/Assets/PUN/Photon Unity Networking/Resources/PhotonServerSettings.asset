@@ -48,4 +48,6 @@ MonoBehaviour:
   - CardPlaced
   - PlaceCard
   - UseSpell
+  - SelectCard
+  - AttackSequence
   DisableAutoOpenWizard: 1

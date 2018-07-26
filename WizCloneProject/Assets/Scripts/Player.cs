@@ -21,6 +21,7 @@ public class Player : Photon.MonoBehaviour{
     //List<Creature> battleline = new List<Creature>();
     //List<bool> battlelinefilling = new List<bool>();
 
+
 	void Start ()
     {
         health = 30;
@@ -50,6 +51,11 @@ public class Player : Photon.MonoBehaviour{
             stream.SendNext(earth);
             stream.SendNext(air);
             stream.SendNext(hasturn);
+            for(int i = 0; i<7; i++)
+            {
+                stream.SendNext(battlelinefilling[i]);
+            }
+            
         }
         else
         {
@@ -60,6 +66,11 @@ public class Player : Photon.MonoBehaviour{
             this.earth = (int)stream.ReceiveNext();
             this.air = (int)stream.ReceiveNext();
             this.hasturn = (bool)stream.ReceiveNext();
+            for (int i = 0; i < 7; i++)
+            {
+                this.battlelinefilling[i] = (bool)stream.ReceiveNext();
+            }
+            
         }
     }
     

@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 
         playerone.hasturn = true;
         battleManager.attacker = playerone;
+        battleManager.defender = playertwo;
     }
 
 
@@ -66,10 +67,8 @@ public class GameManager : MonoBehaviour
 
     public void SkipTurn()
     {
-        Debug.Log("button pressed");
         if (localplayer.hasturn == true)
         {
-            Debug.Log("button active");
             photonView.RPC("ChangeTurn", PhotonTargets.All);
             battleUIManager.UpdateStats();
         }
@@ -80,6 +79,7 @@ public class GameManager : MonoBehaviour
     public void ChangeTurn()
     {
         Debug.Log("Turn function started");
+        battleManager.SwitchAttacker();
         for (int i = 0; i < 2; i++)
         {
             if (players[i].hasturn == true)
@@ -92,25 +92,45 @@ public class GameManager : MonoBehaviour
                 players[i].hasturn = true;
             }
         }
-        battleManager.SwitchAttacker();
         battleUIManager.UpdateStats();
     }
 
     public void CardSelected(int n)
     {
-        selectedcard = localplayer.spellbook[n];
+        if (localplayer.hasturn == true)
+        {
+            photonView.RPC("SelectCard", PhotonTargets.All, n);
+        }
+    }
+    [PunRPC]
+    public void SelectCard(int n)
+    {
+        if (playerone.hasturn == true)
+        {
+            selectedcard = playerone.spellbook[n];
+        }
+        else
+        {
+            selectedcard = playertwo.spellbook[n];
+        }
     }
     public void CardPlaced(int slot)
     {
-        if (localplayer.hasturn == true && selectedcard.iscreature == true)
+
+        if (localplayer.hasturn == true && selectedcard.iscreature == true
+            && localplayer.battlelinefilling[slot] == false)
         {
             photonView.RPC("PlaceCard", PhotonTargets.All, slot);
+            photonView.RPC("AttackSequence", PhotonTargets.All);
+            AttackSequence();
+            photonView.RPC("ChangeTurn", PhotonTargets.All);
         }
     }
     [PunRPC]
     public void PlaceCard(int slot)
     {
         battleManager.PlaceCard((Creature)selectedcard, slot);
+        battleUIManager.UpdateBattleline();
     }
     public void SpellUsed(int slot)
     {
@@ -122,6 +142,12 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     public void UseSpell (int slot)
     {
-        battleManager.UseSpell((Spell)selectedcard, slot);
+        battleManager.UseSpell(slot);
+        battleUIManager.UpdateBattleline();
+    }
+    [PunRPC]
+    public void AttackSequence()
+    {
+        battleManager.AttackSequence(localplayer);
     }
 }
