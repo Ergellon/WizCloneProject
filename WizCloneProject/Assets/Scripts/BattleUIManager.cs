@@ -54,7 +54,6 @@ public class BattleUIManager : MonoBehaviour {
         {
             if(player.battlelinefilling[i] == true)
             {
-                Debug.Log(i);
                 playerbattleline[i].SetActive(true);
                 playercreatureattack[i].text = player.battleline[i].attack.ToString();         
                 playercreaturehealth[i].text = player.battleline[i].health.ToString();
@@ -63,7 +62,6 @@ public class BattleUIManager : MonoBehaviour {
             }
             if (enemy.battlelinefilling[i] == true)
             {
-                Debug.Log(i);
                 enemybattleline[i].SetActive(true);
                 //enemycreatureattack[i].text = "kekekeke";
                 enemycreatureattack[i].text = enemy.battleline[i].attack.ToString();

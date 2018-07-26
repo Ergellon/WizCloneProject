@@ -27,28 +27,14 @@ public class BattleManager : MonoBehaviour {
     }
     public void SwitchAttacker()
     {
-        if (playerone == attacker)
-        {
-            attacker = playertwo;
-            defender = playerone;
-        }
-        else if (playertwo == attacker)
-        {
-            defender = playertwo;
-            attacker = playerone;
-        }
-        else
-        {
-            Debug.Log("alert");
-        }
-        //Player p = attacker;
-       // attacker = defender;
-        //defender = p;
+        Player p = attacker;
+        attacker = defender;
+        defender = p;
     }
     public void PlaceCard(Creature creature, int slot)
     {
-        attacker.battlelinefilling[slot] = true;
         attacker.battleline[slot] = creature;
+        attacker.battlelinefilling[slot] = true;
     }
     public void UseSpell (int slot)
     {
@@ -62,23 +48,28 @@ public class BattleManager : MonoBehaviour {
                 {
                     attacker.battleline[i].OnAttack(attacker, defender, i);
                 }
-                else if (attacker.battlelinefilling[i] == true && attacker.battleline[i].firstturn == true)
+                for (int j = 0; j < 7; j++)
+                {
+                    if (defender.battlelinefilling[j] == true)
+                    {
+                        if (defender.battleline[j].health <= 0)
+                        {
+                            defender.battleline[j].OnDeath(attacker, defender, j);
+                            defender.battleline[j].firstturn = true;
+                            battleUIManager.RemoveCreatureOnUI(defender, j);
+                            defender.battlelinefilling[j] = false;
+                        }
+                    }
+                }           
+
+            battleUIManager.UpdateBattleline();
+
+            if (attacker.battlelinefilling[i] == true && attacker.battleline[i].firstturn == true)
+            {
                 {
                     attacker.battleline[i].firstturn = false;
                 }
-            for (int j = 0; j<7; j++)
-            {
-                if (defender.battlelinefilling[j] == true)
-                {
-                    if (defender.battleline[j].health <= 0)
-                    {
-                        defender.battleline[j].OnDeath(attacker, defender, j);
-                        battleUIManager.RemoveCreatureOnUI(defender, j);
-                        defender.battlelinefilling[j] = false;
-                    }
-                }
             }
-            battleUIManager.UpdateBattleline();
         }
     }
     

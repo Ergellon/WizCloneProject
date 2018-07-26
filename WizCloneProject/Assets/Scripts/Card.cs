@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card {
+public class Card  {
 
     public int manacost;
     public int attack;
@@ -17,7 +17,12 @@ public class Card {
 
     public Card()
     {
+        
+    }
 
+    public Card CopyCard()
+    {
+        return (Card)this.MemberwiseClone();
     }
 
 }

@@ -78,8 +78,6 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     public void ChangeTurn()
     {
-        Debug.Log("Turn function started");
-        battleManager.SwitchAttacker();
         for (int i = 0; i < 2; i++)
         {
             if (players[i].hasturn == true)
@@ -92,6 +90,7 @@ public class GameManager : MonoBehaviour
                 players[i].hasturn = true;
             }
         }
+        battleManager.SwitchAttacker();
         battleUIManager.UpdateStats();
     }
 
@@ -107,11 +106,11 @@ public class GameManager : MonoBehaviour
     {
         if (playerone.hasturn == true)
         {
-            selectedcard = playerone.spellbook[n];
+            selectedcard = playerone.spellbook[n].CopyCard();
         }
         else
         {
-            selectedcard = playertwo.spellbook[n];
+            selectedcard = playertwo.spellbook[n].CopyCard();
         }
     }
     public void CardPlaced(int slot)
@@ -121,8 +120,11 @@ public class GameManager : MonoBehaviour
             && localplayer.battlelinefilling[slot] == false)
         {
             photonView.RPC("PlaceCard", PhotonTargets.All, slot);
+            battleUIManager.UpdateBattleline();
             photonView.RPC("AttackSequence", PhotonTargets.All);
-            AttackSequence();
+            //AttackSequence();
+            battleUIManager.UpdateStats();
+            battleUIManager.UpdateBattleline();
             photonView.RPC("ChangeTurn", PhotonTargets.All);
         }
     }
